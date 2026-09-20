@@ -16,6 +16,10 @@ body {
     border-bottom: solid black 1px;
     gap: 10px;
     align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
 }
 
 .navbar__s1__title {
@@ -36,6 +40,7 @@ body {
     border: none;
     font-size: 16px;
     width: 100%;
+    background-color: transparent;
 }
 
 .navbar__s2 input:focus {
@@ -62,10 +67,44 @@ body {
     border-radius: 30px;
     padding: 10px;
 }
+/* My learning */
+.Learning{
+    position: relative;
+}
+.Learning-popup{
+    position: absolute;
+    padding: 20px;
+    border: solid black 1px;
+    background-color: white;
+    width: 100px;
+    right: 0;
+    top: 150%;
+    display: none;
+}
+.Learning{
+    cursor: pointer;
+}
+.Learning:hover .Learning-popup{
+    display: block;
+}
+
+
 
 /* Sale Image */
+.sale-image{
+    position: relative;
+}
 .sale-image img {
     width: 100%;
+}
+.sales-image-offer{
+    border: solid black 2px;
+    width: 35%;
+    padding: 2%;
+    position: absolute;
+    background-color: white;
+    top: 15%;
+    left: 10%;
 }
 
 /* Recommended */
