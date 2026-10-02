@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Gabarito", sans-serif;
+}
+
+/* Navbar */
+
+.navbar {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid black 1px;
+    gap: 10px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.navbar__s1__title {
+    color: #A435F0;
+}
+
+.navbar__s2 {
+    display: flex;
+    padding: 10px;
+    border: solid black 1px;
+    border-radius: 30px;
+    width: 60%;
+    gap: 10px;
+    align-items: center;
+}
+
+.navbar__s2 input {
+    border: none;
+    font-size: 16px;
+    width: 100%;
+    background-color: transparent;
+}
+
+.navbar__s2 input:focus {
+    outline: none;
+}
+
+.navbar__s3 {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.navbar__s4{
+    display: none;
+}
+
+/* Categories */
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-bottom: solid black 1px;
+}
+
+.categories p {
+    background-color: #A435F0;
+    border-radius: 30px;
+    padding: 10px;
+    border: solid #A435F0 1px;
+}
+
+.categories p:hover{
+    cursor: pointer;
+    background-color: transparent;
+    border:solid #A435F0 1px;
+}
+
+/* My learning */
+
+.Learning{
+    position: relative;
+}
+.Learning-popup{
+    position: absolute;
+    padding: 20px;
+    border: solid black 1px;
+    background-color: white;
+    width: 100px;
+    right: 0;
+    top: 150%;
+    display: none;
+}
+.Learning{
+    cursor: pointer;
+}
+.Learning:hover .Learning-popup{
+    display: block;
+}
+
+/* Sale Image */
+.sale-image{
+    position: relative;
+}
+.sale-image img {
+    width: 100%;
+}
+.sales-image-offer{
+    border: solid black 2px;
+    width: 35%;
+    padding: 2%;
+    position: absolute;
+    background-color: white;
+    top: 15%;
+    left: 10%;
+    animation-name: offer;
+    animation-duration: 2s;
+    opacity:0;
+    animation-fill-mode: forwards;
+}
+@keyframes offer{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* Recommended */
+.recommended {
+    padding: 10px;
+}
+
+.recommended-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.course-card {
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 10px;
+    border: solid black 2px;
+    border-radius: 12px;
+}
+.course-card:hover{
+    transform: scale(1.025);
+    transition: 2s;
+}
+
+.course-card img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.course-card h2,p{
+    margin: 10px;
+}
+
+/* Topics */
+.topics {
+    padding: 20px;
+}
+
+.topic-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.topic-container p {
+    border: solid gray 2px;
+    padding: 10px;
+    flex-grow: 1;
+    flex-basis: 25%;
+    text-align: center;
+}
+/* Most Popular */
+.popular{
+    padding: 10px;
+}
+.popular-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* Footer */
+.footer{
+ padding: 30px;
+ background-color: black;
+ color: white;
+}
+.footer__one{
+    display: flex;
+    gap: 10px;
+}
+.footer__one__s2{
+    padding-left: 60px;
+}
+.footer__one p{
+    margin:20px;
+}
+.footer__two{
+    margin: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width:800px){
+    body{
+        font-size: 10px;
+    }
+    .course-card{
+        flex-basis: 40%;
+    }
+}
+@media screen and (max-width:600px){
+    .categories{
+        display: none;
+    }
+    .navbar__s2,.navbar__s3{
+        display: none;
+    }
+    .navbar__s4{
+        display: block;
+    }
+
+}
